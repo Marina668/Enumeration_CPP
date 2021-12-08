@@ -1,3 +1,8 @@
+/* File Enumeration_test.cpp
+Realization of tests for enum classes functions
+Done by Kostiuchenko Maryna (group computer mathematics 2)
+Date 08.12.2021*/
+
 #include "Enumeration.h"
 
 using namespace std;

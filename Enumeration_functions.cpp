@@ -1,6 +1,9 @@
-//
-// Created by Maryna on 29.11.2021.
-//
+/* File Enumeration_functions.cpp
+Realization of functions for enum classes
+Done by Kostiuchenko Maryna (group computer mathematics 2)
+Date 08.12.2021
+Implementations of functions
+*/
 
 #include "Enumeration.h"
 
@@ -255,13 +258,13 @@ int input_types(const string &type) {
 
 string int_2_type(Types type) {
     if (type == static_cast<Types>(Types::SPADES))
-        return "Seven";
+        return "Spades";
     else if (type == static_cast<Types>(Types::CLUBS))
-        return "Eight";
+        return "Clubs";
     else if (type == static_cast<Types>(Types::DIAMONDS))
-        return "Nine";
+        return "Diamonds";
     else if (type == static_cast<Types>(Types::HEARTS))
-        return "Ten";
+        return "Hearts";
     else return "Incorrect number of type";
 }
 

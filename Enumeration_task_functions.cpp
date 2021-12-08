@@ -1,43 +1,84 @@
-//
-// Created by Maryna on 07.12.2021.
-//
+/* File Enumeration_task.functions.cpp
+Realization of input and output functions
+Done by Kostiuchenko Maryna (group computer mathematics 2)
+Date 08.12.2021
+Implementations of input and output functions for task 1-6
+*/
 
 #include "Enumeration.h"
 
 void task1(const string &filename, const string &filename_out, int is_console) {
     int number_of_day, number_of_month, number_of_color, number_of_piece;
     string day, month, color, chess_piece;
+    char* end;
+    char number_temp[256];
 
     if (is_console) {
         //Input from console
 
         //Input number of day
-        cout << "Enter number of day: ";
-        cin >> number_of_day;
+        //if enter not type int - try again
+        while(true)
+        {
+            printf("Enter number of day: ");
+            cin >> number_temp;
+            number_of_day = strtod(number_temp, &end);
+            if (strcmp(end, "") != 0)             //If there is an error the value of *end will be nonzero
+                cout << "try again" << endl;
+            else
+                break;
+        }
 
         //Input day
         cout << "Enter day: ";
         cin >> day;
 
         //Input number of month
-        cout << "Enter number of month: ";
-        cin >> number_of_month;
+        //if enter not type int - try again
+        while(true)
+        {
+            printf("Enter number of month: ");
+            cin >> number_temp;
+            number_of_month = strtod(number_temp, &end);
+            if (strcmp(end, "") != 0)             //If there is an error the value of *end will be nonzero
+                cout << "try again" << endl;
+            else
+                break;
+        }
 
         //Input month
         cout << "Enter month: ";
         cin >> month;
 
         //Input number of color
-        cout << "Enter number of color: ";
-        cin >> number_of_color;
+        //if enter not type int - try again
+        while(true)
+        {
+            printf("Enter number of color: ");
+            cin >> number_temp;
+            number_of_color = strtod(number_temp, &end);
+            if (strcmp(end, "") != 0)             //If there is an error the value of *end will be nonzero
+                cout << "try again" << endl;
+            else
+                break;
+        }
 
         //Input color
         cout << "Enter color: ";
         cin >> color;
 
         //Input number of chess piece
-        cout << "Enter number of chess piece: ";
-        cin >> number_of_piece;
+        //if enter not type int - try again
+        while(true)
+        {
+            printf("Enter number of chess piece: ");
+            cin >> number_temp;
+            number_of_piece = strtod(number_temp, &end);
+            if (strcmp(end, "") != 0)             //If there is an error the value of *end will be nonzero
+                cout << "try again" << endl;
+            else
+                break;
+        }
 
         //Input chess piece
         cout << "Enter chess piece: ";
@@ -161,7 +202,7 @@ void task2(const string &filename, const string &filename_out, int is_console) {
     print_card(cards[0]);
     cout << "Card y: ";
     print_card(cards[1]);
-    cout << trump << endl;
+    cout << "Trump: " << trump << endl;
     cout << beat(cards[0], cards[1], static_cast<Types>(input_types(trump))) << endl;
 
     //Write to file
@@ -178,13 +219,25 @@ void task2(const string &filename, const string &filename_out, int is_console) {
 void task3(const string &filename, const string &filename_out, int is_console) {
     double length = 0.0;
     string unit;
+    char* end;
+    char number_temp[256];
 
     if (is_console) {
         //Input from console
 
         //Input length
-        cout << "Enter length: ";
-        cin >> length;
+        //if enter not type int - try again
+        while(true)
+        {
+            printf("Enter length: ");
+            cin >> number_temp;
+            length = strtod(number_temp, &end);
+            if (strcmp(end, "") != 0)             //If there is an error the value of *end will be nonzero
+                cout << "try again" << endl;
+            else
+                break;
+        }
+
         //Input unit of length
         cout << "Enter unit of length: ";
         cin >> unit;
@@ -331,8 +384,7 @@ void task6(const string &filename, const string &filename_out, int is_console) {
 
         //Input how many time ship go each course and put to array of times
         for (int i = 0; i < 4; i++) {
-            printf("How many time ship go");
-            int_2_course(static_cast<Course>(static_cast<int>(Course::NORTH) + i));
+            cout <<"How many time ship go " << int_2_course(static_cast<Course>(i)) << ": ";
             cin >> t;
             time[i] = t;
         }
