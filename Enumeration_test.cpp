@@ -14,11 +14,13 @@ int main() {
     ofstream fout;
     string filename = "enumeration_input.txt";
     string filename_out = "enumeration_output.txt";
+
     int number_of_task = 0;
     cout << "Enter task to test (1-6):";
     cin >> number_of_task;
     cin.ignore(1024, '\n');
     int is_console = console_or_file();
+
 
     //Task 1
 
