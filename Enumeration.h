@@ -265,6 +265,7 @@ int syllables(const string &sentence);
 void task5(const string &filename, const string &filename_out, int is_console);
 
 
+
 //Classes and functions for Task 6
 
 //enum class for Course

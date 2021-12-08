@@ -7,6 +7,7 @@ Implementations of input and output functions for task 1-6
 
 #include "Enumeration.h"
 
+
 void task1(const string &filename, const string &filename_out, int is_console) {
     int number_of_day, number_of_month, number_of_color, number_of_piece;
     string day, month, color, chess_piece;

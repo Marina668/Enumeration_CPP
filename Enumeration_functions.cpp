@@ -5,6 +5,7 @@ Date 08.12.2021
 Implementations of functions
 */
 
+
 #include "Enumeration.h"
 
 

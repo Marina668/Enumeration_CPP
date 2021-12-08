@@ -8,6 +8,7 @@ Date 08.12.2021*/
 using namespace std;
 
 
+
 int main() {
     ifstream finp;
     ofstream fout;
